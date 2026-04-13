@@ -1,0 +1,109 @@
+Design a premium, FAANG-level UX portfolio website for a Senior Product Designer named Thanushree Uppoor, based in Bangalore, with 5+ years of UX experience and 7.6+ years overall experience.
+
+This portfolio should position her as a top-tier product designer specializing in enterprise systems, internal tools, and AI-powered platforms, with strong business impact and cross-functional leadership.
+
+STYLE & VISUAL DIRECTION:
+- Minimal, high-end, elegant (inspired by Google, Apple, Airbnb portfolios)
+- Strong typography, lots of whitespace
+- Neutral palette (black, white, grey, subtle accent)
+- Grid-based layout, consistent spacing (8pt system)
+- Clean, structured, not overly decorative
+- Professional and mature (not trendy or flashy)
+
+HERO SECTION:
+- Name: Thanushree Uppoor
+- Title: Senior Product Designer
+- Tagline: Designing scalable enterprise systems and AI-driven platforms with measurable business impact
+- Short intro: Product designer with 5+ years of UX experience, specializing in workflow-driven platforms, internal tools, and enterprise UX. Known for solving complex problems, improving operational efficiency, and delivering measurable outcomes.
+- CTA: View Case Studies
+
+SELECTED CASE STUDIES (3–4):
+Create strong case study cards with:
+- Project title
+- Short problem statement
+- Key metrics (highlight numbers)
+- Role: Lead UX Designer
+- Clean thumbnail
+
+CASE STUDY 1:
+Store Performance Platform & BI Dashboard
+- Problem: Complex operational workflows and lack of centralized performance visibility across global teams
+- Role: Lead UX Designer
+- Work: Designed end-to-end enterprise BI platform from concept to high-fidelity
+- Impact:
+  - Improved task adherence by 30%
+  - Reduced manager reporting time by 40–60%
+  - Increased data completeness from 55% to 95%
+  - Enabled $6.5M annual savings and $5M TCO reduction
+
+CASE STUDY 2:
+Organization Hierarchy & Navigation Platform (CTO Office)
+- Problem: Difficult navigation and lack of clarity in large-scale organizational structure
+- Work: Designed information architecture and navigation system for enterprise org restructuring
+- Impact:
+  - Improved navigation speed by 80%
+  - Reduced person-finding time from 5 minutes to under 30 seconds
+  - Increased onboarding clarity by 50%
+
+CASE STUDY 3:
+AI Image & Video Generation Platform
+- Problem: Heavy reliance on external vendors and slow creative production cycles
+- Work: Designed AI-powered platform for scalable content creation
+- Impact:
+  - Reduced production time
+  - Enabled faster iteration across creative variations
+  - Improved adoption of AI tools for non-technical users
+
+CASE STUDY 4 (Optional):
+Access Management Platform Redesign
+- Problem: Complex permission systems causing confusion and errors
+- Work: Simplified workflows and improved usability
+- Impact:
+  - Reduced access-related errors
+  - Improved onboarding and system clarity
+
+CASE STUDY PAGE TEMPLATE:
+Each case study should follow FAANG storytelling:
+1. Overview (role, duration, team)
+2. Problem (clear business + user problem)
+3. Constraints (enterprise complexity, stakeholders)
+4. Research & Insights (user pain points, findings)
+5. Design Process (flows, wireframes, iterations)
+6. Solution (final UI, dashboards, workflows)
+7. Impact (highlight metrics prominently)
+8. Learnings
+
+ABOUT SECTION:
+- Strong professional story:
+  “I design systems, not just screens. My work focuses on simplifying complex enterprise workflows and enabling teams to operate more efficiently at scale.”
+- Experience highlights:
+  - Senior UX Designer at Nike India Technology Centre
+  - Previously Accenture and Wipro
+  - Experience in enterprise platforms, internal tools, and AI systems
+- Collaboration with Product, Engineering, Analytics, and Leadership
+- Mentoring and design system contributions
+
+SKILLS SECTION:
+- UX & Product Design: Research, Interaction Design, Systems Thinking, Enterprise UX
+- Process: Stakeholder management, Agile, Product thinking
+- Tools: Figma, FigJam, Miro, Jira
+
+DESIGN SYSTEM:
+- Use reusable components
+- Consistent spacing and typography
+- Clean layout and alignment
+
+FOOTER:
+- Email
+- LinkedIn
+- Portfolio link
+
+IMPORTANT:
+- Emphasize measurable impact and metrics throughout
+- Avoid generic UX language
+- Make it feel like a senior, strategic designer portfolio
+- Focus on clarity, structure, and storytelling
+- Make it recruiter-friendly and easy to scan
+
+OUTPUT:
+Generate a complete portfolio layout including homepage and one detailed case study page.

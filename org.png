@@ -1,0 +1,165 @@
+Update ONLY the case study sections in the existing portfolio design. Do NOT change layout, navigation, hero section, or overall styling.
+
+The goal is to upgrade all case studies to FAANG-level storytelling with strong product thinking, system design, and measurable impact.
+
+--------------------------------------------------
+
+GLOBAL RULES (APPLY TO ALL CASE STUDIES):
+
+- Do NOT redesign the page layout
+- Keep existing structure but improve content and hierarchy
+- Reduce text density by ~20%
+- Make content more scannable
+- Highlight metrics visually (bold numbers)
+- Replace generic UX language with product-focused language
+- Use strong ownership verbs: Led, Defined, Drove, Partnered
+
+--------------------------------------------------
+
+ADD THIS STRUCTURE TO EACH CASE STUDY:
+
+1. SIGNAL BAR (ADD AT TOP)
+
+Role: (Lead / Product Designer)  
+Scope: End-to-end (0→1 / redesign / scaling)  
+Users: (scale, e.g. 10,000+)  
+Impact: (metrics — bold)
+
+Make this visually prominent.
+
+--------------------------------------------------
+
+2. SCANNABLE SUMMARY (ABOVE EXISTING CONTENT)
+
+Add a short section with:
+
+- Impact (max 3 bullets)
+- Problem (2–3 lines)
+- Why this matters (1 line — business impact)
+- Key decisions (2–3 bullets)
+
+--------------------------------------------------
+
+3. ENHANCE EXISTING CONTENT WITH:
+
+- Product Thinking (goals, success metrics, stakeholders)
+- Key Decisions & Trade-offs (MANDATORY)
+- System Thinking (flows, architecture where relevant)
+- What I’d do next (forward-looking thinking)
+
+--------------------------------------------------
+
+PROJECT-SPECIFIC UPDATES:
+
+--------------------------------------------------
+
+PROJECT: STORE PERFORMANCE PLATFORM
+
+- Emphasize scale (10,000+ users)
+- Highlight:
+  +30% task adherence  
+  -40–60% reporting time  
+  55% → 95% data completeness  
+  $6.5M savings + $5M TCO reduction  
+
+- Add system thinking:
+Employee → Store → Region → Global
+
+- Add decision:
+Unified multiple tools into one system to improve consistency
+
+--------------------------------------------------
+
+PROJECT: LLM CHATBOT
+
+Update positioning to:
+
+"LLM-powered conversational AI platform"
+
+Add:
+
+- System design:
+User → LLM → Knowledge (GitHub) → Response → Fallback
+
+- Key decisions:
+Guided responses over open-ended  
+LLM for intent, not source of truth  
+Human fallback for trust  
+
+- Emphasize:
+65% query reduction  
+75% faster response  
+
+--------------------------------------------------
+
+PROJECT: ORG HIERARCHY (IMPORTANT — FIX GENERIC CONTENT)
+
+Replace generic content with:
+
+- CTO-backed initiative
+- Designed for 1000+ node scalability
+- Partnered directly with CTO office and engineering leadership
+
+Add:
+
+System thinking:
+Departments → Teams → Roles → Individuals  
+
+Key decisions:
+- Progressive disclosure to manage complexity  
+- Clustering for large teams  
+- Balance depth vs breadth  
+
+Impact:
++80% navigation speed  
+5 min → <30 sec search  
++50% onboarding clarity  
+
+--------------------------------------------------
+
+PROJECT: DESIGN SYSTEM
+
+Add:
+
+- Governance and adoption
+- Token-based system
+- Decision:
+Consistency over flexibility
+
+--------------------------------------------------
+
+PROJECT: KEY MANAGEMENT
+
+Add:
+
+- Simplified permission model
+- System thinking around security workflows
+- Emphasize clarity + safety
+
+--------------------------------------------------
+
+PROJECT: AI IMAGE / VIDEO PLATFORM
+
+Add:
+
+- Human-AI workflow
+- Guided prompt system
+- Decision:
+Controlled generation for predictable output
+
+--------------------------------------------------
+
+FINAL RULES:
+
+- Keep sections concise
+- Avoid long paragraphs
+- Improve clarity and hierarchy
+- Do NOT change layout — only enhance content
+
+--------------------------------------------------
+
+OUTPUT:
+
+- Updated case study content only
+- Improved hierarchy and readability
+- FAANG-level storytelling and positioning

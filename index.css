@@ -1,0 +1,213 @@
+Update ONLY the case study content in the existing portfolio. Do NOT change layout, styling, spacing, or page structure.
+
+IMPORTANT:
+- Use ONLY the provided real project details
+- Do NOT generate generic UX content
+- Do NOT hallucinate technical systems
+- Keep all metrics and facts EXACT
+- Improve clarity, hierarchy, and FAANG-level storytelling
+
+--------------------------------------------------
+
+GLOBAL STRUCTURE (APPLY TO ALL PROJECTS):
+
+1. SIGNAL BAR (ADD AT TOP)
+Role • Scope • Users • Impact (bold metrics)
+
+2. SCANNABLE SUMMARY
+- Impact (max 3 bullets)
+- Problem (short)
+- Why this matters (business)
+- Key decisions (2–3)
+
+3. DETAILED CONTENT (REFINE EXISTING)
+- Overview
+- Problem
+- Process (keep real steps)
+- Product thinking
+- Key decisions & trade-offs
+- System thinking (ONLY if applicable)
+- Solution
+- Impact
+- Learnings
+
+--------------------------------------------------
+
+PROJECT 1: STORE PERFORMANCE PLATFORM + BI DASHBOARDS
+
+Context:
+Global enterprise platform replacing licensed tool, used by 10,000+ users.
+
+Impact (MUST SHOW):
+- $6.5M annual savings
+- $5M TCO reduction
+- +30% task adherence
+- 40–60% reduction in reporting time
+- Data completeness improved 55% → 95%
+
+Problem:
+Fragmented tools, inconsistent reporting, poor scalability, lack of visibility.
+
+System Thinking (IMPORTANT):
+Employee → Store → Region → Global
+
+Key Decisions:
+- Unified multiple disconnected tools into one platform
+- Simplified employee workflows with gamification
+- Built multi-level BI dashboards for leadership visibility
+- Designed for global localization from start
+
+Keep REAL structure:
+- Employee routines (checklist, scoring)
+- Manager tools (tracking, alerts)
+- BI dashboards (trends, filters, comparisons)
+- Localization system
+
+DO NOT SIMPLIFY THIS PROJECT — keep enterprise depth.
+
+--------------------------------------------------
+
+PROJECT 2: ORGANIZATIONAL HIERARCHY (CTO PROJECT)
+
+Context:
+CTO-backed enterprise org visualization platform.
+
+Role:
+Worked directly with CTO office and engineering leadership.
+
+Problem:
+Leadership could not understand org structure at scale (1000+ nodes).
+
+Impact:
+- 80% faster navigation
+- Person search reduced from 5 min → <30 sec
+- 50% better onboarding clarity
+
+System Thinking (MANDATORY):
+Departments → Teams → Roles → Individuals
+
+Key Decisions:
+- Designed hierarchy rules for depth vs breadth
+- Used progressive disclosure to handle complexity
+- Introduced clustering for large org structures
+- Ensured performance at scale (1000+ nodes)
+
+Keep REAL PROCESS:
+- Discovery with CTO office
+- IA design (expand/collapse, grouping)
+- UX flows (drill-down, cross-team navigation)
+- UI system (node cards, connectors, dark mode)
+
+Solution MUST include:
+- Hierarchy graph
+- Cluster view
+- Node card system
+- Person detail panel
+- Filters
+
+--------------------------------------------------
+
+PROJECT 3: KEY MANAGEMENT PORTAL
+
+Context:
+Secure internal platform for managing application secrets.
+
+Focus:
+Security + clarity + scalability
+
+Problem:
+Confusing permission flows, unclear hierarchy, risk of misconfiguration.
+
+Key Decisions:
+- Simplified permission model into unified access view
+- Designed clear hierarchy for secrets (apps, environments)
+- Introduced guardrails for sensitive actions
+- Focused on clarity over technical complexity
+
+System Thinking:
+Secret lifecycle → creation → grouping → permissions → rotation → archival
+
+Solution MUST include:
+- Logical grouping structure
+- Unified access control view
+- Safer workflows with confirmations
+- Clear distinction between sensitive vs metadata
+
+Impact (KEEP REAL):
+- Reduced permission errors
+- Faster onboarding
+- Improved developer confidence
+- Better security compliance
+
+--------------------------------------------------
+
+PROJECT 4: LLM-POWERED CHATBOT (ACCURATE VERSION)
+
+Title:
+LLM-Powered Conversational Support Platform
+
+Context:
+Internal chatbot to reduce support tickets and help users clarify platform queries.
+
+Impact:
+- 65% reduction in support queries
+- 75% faster response time
+- 45% cost reduction
+- 15,000+ conversations handled
+
+Problem:
+Users relied on ticket-based support for platform questions, causing delays.
+
+Key Decisions:
+- Designed conversational interface instead of ticket workflow
+- Used LLM for natural language understanding
+- Created guided responses instead of fully open-ended AI
+- Added escalation to human support for complex queries
+
+System Thinking (KEEP SIMPLE — DO NOT OVERENGINEER):
+User query → LLM understanding → response → escalation
+
+Focus:
+- Conversational UX
+- Task-based queries
+- Non-technical user usability
+
+DO NOT ADD:
+- Fake architecture
+- GitHub knowledge claims unless explicitly needed
+
+--------------------------------------------------
+
+PROJECT 5: DESIGN SYSTEM
+
+Context:
+Enterprise design system for consistency and scalability.
+
+Key Decisions:
+- Consistency over flexibility
+- Token-based system
+- Reusable components
+
+Focus:
+- Scalability
+- Adoption across teams
+- Design-dev alignment
+
+--------------------------------------------------
+
+FINAL RULES:
+
+- Keep content concise and scannable
+- Bold ALL key metrics
+- Remove generic UX phrases
+- Maintain real enterprise tone
+- Do NOT change layout
+- Do NOT invent new features or systems
+
+--------------------------------------------------
+
+OUTPUT:
+
+- Updated case study content ONLY
+- Accurate, real project representation
+- FAANG-level clarity and storytelling

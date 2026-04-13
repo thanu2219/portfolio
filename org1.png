@@ -1,0 +1,618 @@
+export interface CaseStudy {
+  id: string;
+  title: string;
+  subtitle: string;
+  problemStatement: string;
+  impact: string[];
+  role: string;
+  timeline: string;
+  thumbnail: string;
+  category?: 'flagship' | 'featured' | 'additional';
+  signalBar?: {
+    scope: string;
+    users: string;
+  };
+  scannableSummary?: {
+    impact: string[];
+    problem: string;
+    whyItMatters: string;
+    keyDecisions: string[];
+  };
+  overview: {
+    context: string;
+    challenge: string;
+    solution: string;
+  };
+  details: {
+    problem: string;
+    roleResponsibilities: string[];
+    constraints: string[];
+    research: string[];
+    designProcess: string[];
+    keyDesignDecisions?: string[];
+    leadershipInfluence?: string[];
+    beforeAfter?: string[];
+    finalSolution: string;
+    impact: string[];
+    learnings: string[];
+  };
+}
+
+export const caseStudies: CaseStudy[] = [
+  // PROJECT 1: ENTERPRISE DESIGN SYSTEM (FLAGSHIP)
+  {
+    id: 'enterprise-design-system',
+    title: 'Enterprise Design System',
+    subtitle: 'Scalable design system for Nike\'s internal platform ecosystem',
+    problemStatement: 'Lack of consistency, duplicated effort, and inefficiency across design and engineering teams',
+    impact: ['Improved team efficiency by 40%', 'Reduced design-to-dev handoff time by 50%', 'Enabled scalable product development'],
+    role: 'Design System Lead',
+    timeline: 'Nike India • 2025',
+    category: 'flagship',
+    thumbnail: 'https://images.unsplash.com/photo-1769149068959-b11392164add?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXNpZ24lMjBzeXN0ZW0lMjBjb21wb25lbnRzfGVufDF8fHx8MTc3NDM2NzU3N3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    signalBar: {
+      scope: '20+ applications',
+      users: '10,000+ employees'
+    },
+    scannableSummary: {
+      impact: ['Improved team efficiency by 40%', 'Reduced design-to-dev handoff time by 50%', 'Enabled scalable product development'],
+      problem: 'Lack of consistency, duplicated effort, and inefficiency across design and engineering teams',
+      whyItMatters: 'Standardizes design and development workflow across teams, reducing time and effort',
+      keyDecisions: ['Led design system strategy and roadmap definition', 'Designed comprehensive component library and design tokens', 'Collaborated with engineering to build React component library']
+    },
+    overview: {
+      context: 'Nike\'s internal platform teams were building similar features independently, leading to inconsistent user experiences, duplicated design and engineering work, and slower product development cycles.',
+      challenge: 'Multiple product teams were creating their own components and patterns, resulting in fragmented experiences across internal tools. Designers and engineers spent significant time recreating the same UI elements, and maintaining consistency was nearly impossible.',
+      solution: 'Led the creation of a comprehensive enterprise design system with reusable components, design tokens, documentation, and governance processes that standardized the design and development workflow across teams.'
+    },
+    details: {
+      problem: 'Nike\'s internal platform ecosystem consisted of 20+ applications built by different teams across regions. Each team had developed their own design patterns, component libraries, and styling approaches. This fragmentation created several critical problems: inconsistent user experiences confused employees switching between tools, designers spent 40% of their time recreating common UI patterns, engineers built duplicate components instead of reusing code, onboarding new team members took weeks due to lack of standards, and accessibility and usability issues were repeated across products. There was no single source of truth, and every new feature required starting from scratch.',
+      roleResponsibilities: [
+        'Owned design system strategy, roadmap, and business case — positioned system as productivity driver, not just UI library',
+        'Led cross-functional initiative spanning 20+ applications, 15+ product teams, and multiple tech stacks (React, Angular, legacy)',
+        'Defined system architecture and governance model balancing standardization vs flexibility for diverse use cases',
+        'Partnered with Engineering leadership to build React component library with API parity to design specs',
+        'Drove adoption through evangelism, training, and metrics — measured efficiency gains, not just component count',
+        'Established contribution processes enabling teams to propose components while maintaining quality standards',
+        'Championed accessibility-first approach, elevating compliance from 60% to 95% across all products',
+        'Built sustainable model through documentation, versioning, and ongoing maintenance processes'
+      ],
+      constraints: [
+        'Had to support legacy applications while enabling new development',
+        'Multiple tech stacks (React, Angular, legacy systems)',
+        'Diverse team skill levels and design maturity',
+        'Limited resources for ongoing maintenance and updates',
+        'Need for backward compatibility during migration',
+        'Balancing flexibility vs. consistency across use cases'
+      ],
+      research: [
+        'Audited UI patterns and components across all internal platforms',
+        'Interviewed 40+ designers and engineers about pain points',
+        'Analyzed design system adoption at companies like Airbnb, IBM, and Shopify',
+        'Conducted workshops with product teams to define needs and priorities',
+        'Studied accessibility standards (WCAG 2.1) and enterprise requirements',
+        'Benchmarked against leading design systems (Material Design, Carbon, Polaris)'
+      ],
+      designProcess: [
+        'Started with comprehensive audit of existing patterns and components',
+        'Defined design principles and system architecture',
+        'Created design token system for colors, typography, spacing, and elevation',
+        'Designed foundational components (buttons, inputs, navigation, tables)',
+        'Built more complex patterns (forms, data visualization, modals)',
+        'Developed comprehensive documentation with usage guidelines and examples',
+        'Collaborated with engineering on React implementation and API design',
+        'Ran pilot projects with 3 teams to validate and refine the system',
+        'Created contribution guidelines for teams to propose new components',
+        'Established version control and release processes'
+      ],
+      keyDesignDecisions: [
+        "**Token-first architecture over component-first:** Built design token system (colors, typography, spacing) before components. *Problem:* Component-first creates inconsistency and rework when themes change. *Alternatives:* Build components first (faster but inflexible), tokens later (causes rework), tokens-first (chosen). *Why:* Tokens provide single source of truth for styling — changes propagate automatically across all components. *Impact:* Enabled theming and reduced design-to-dev handoff by **50%**.",
+        "**Pilot with 3 teams before full rollout:** Validated system with small pilot teams instead of immediate company-wide launch. *Problem:* Full rollout without validation risks failure at scale. *Alternatives:* Launch to everyone (high risk), slow waterfall approach (delayed value), pilot with 3 teams (chosen). *Why:* Pilots reveal real-world issues while limiting blast radius — feedback improves system before scale. *Impact:* Identified 15 critical improvements, enabling **85% adoption within 6 months**.",
+        "**Open contribution model with governance:** Allowed teams to propose new components through defined process instead of closed system. *Problem:* Closed systems become bottlenecks and do not scale. *Alternatives:* Fully open (quality issues), fully closed (bottleneck), governed contribution (chosen). *Why:* Balances speed and quality — teams can contribute while maintaining standards. *Impact:* **40% efficiency improvement** and community ownership driving long-term sustainability.",
+        "**Multi-tech-stack support (React + Angular + Figma):** Built design system for multiple stacks instead of React-only. *Problem:* Nike has legacy Angular apps that need consistency too. *Alternatives:* React-only (leaves Angular teams behind), wait for full migration (years), multi-stack support (chosen). *Why:* Pragmatic approach acknowledges reality of enterprise systems — enables consistency now, not after multi-year migration. *Impact:* Achieved **70% component duplication reduction** across all stacks."
+      ],
+      leadershipInfluence: [
+        "Secured executive buy-in for design system investment by quantifying cost of fragmentation: designers spending 40% time on duplicate work = $2M+ annual waste, convincing leadership to fund initiative",
+        "Influenced Engineering leadership to adopt token-first architecture by demonstrating CSS maintenance burden in existing apps — tokens reduce future technical debt by 60%",
+        "Aligned 15+ product teams on pilot approach by showing Airbnb and Shopify case studies where pilot-driven systems achieved 2x faster adoption than top-down mandates",
+        "Championed open contribution model by running workshop where teams proposed 12 components in 2 hours — proved community could drive system evolution with governance"
+      ],
+      beforeAfter: [
+        "**Before:** 20+ fragmented apps, 40% designer time on duplicate work, 70% component duplication, 60% accessibility compliance, weeks to onboard new team members",
+        "**After:** Unified design system, 40% efficiency improvement, 70% less duplication, 95% accessibility compliance, 60% faster onboarding, **10,000+ engineering hours saved annually**"
+      ],
+      finalSolution: 'The Enterprise Design System provides a comprehensive library of 60+ components, design tokens, patterns, and guidelines that enable teams to build consistent, accessible internal tools quickly. The system includes: a Figma component library for designers, a React component library for developers, comprehensive documentation with code examples, design tokens for theming and customization, accessibility built into every component, contribution processes for community involvement, and regular updates and maintenance. Teams can now build new features in days instead of weeks, with confidence that they\'re following Nike standards.',
+      impact: [
+        'Improved design and engineering efficiency by 40% across teams',
+        'Reduced design-to-development handoff time by 50%',
+        'Achieved 85% adoption rate across internal platform teams within 6 months',
+        'Enabled 15+ product teams to ship features faster',
+        'Reduced component duplication by 70%',
+        'Improved accessibility compliance from 60% to 95%',
+        'Decreased onboarding time for new designers and engineers by 60%',
+        'Saved an estimated 10,000+ engineering hours annually through reuse',
+        'Established foundation for scalable product development'
+      ],
+      learnings: [
+        'Start small with foundational components before building complex patterns',
+        'Documentation and examples are as important as the components themselves',
+        'Governance and contribution processes drive long-term success',
+        'Adoption requires ongoing evangelism, training, and support',
+        'Balance consistency with flexibility for diverse use cases',
+        'Measure impact through metrics, not just component count',
+        'Collaborate closely with engineering from day one',
+        'Build trust through quick wins before tackling complex migrations'
+      ]
+    }
+  },
+
+  // PROJECT 2: STORE PERFORMANCE PLATFORM
+  {
+    id: 'store-performance-platform',
+    title: 'Store Performance Platform & BI Dashboard',
+    subtitle: 'Enterprise BI platform for global retail operations',
+    problemStatement: 'Fragmented tools, inconsistent reporting, poor scalability, and lack of visibility across global stores',
+    impact: ['$6.5M annual savings', '$5M TCO reduction', '+30% task adherence'],
+    role: 'Lead UX Designer',
+    timeline: 'Nike India • 2023–2024',
+    category: 'featured',
+    thumbnail: 'https://images.unsplash.com/photo-1759752394755-1241472b589d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGludGVsbGlnZW5jZSUyMGRhc2hib2FyZHxlbnwxfHx8fDE3NzQyODU2NDh8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    signalBar: {
+      scope: 'End-to-end 0→1',
+      users: '10,000+ users globally'
+    },
+    scannableSummary: {
+      impact: ['$6.5M annual savings', '$5M TCO reduction', '+30% task adherence'],
+      problem: 'Global retail operations lacked unified platform for performance tracking, operational workflows, and leadership visibility. Fragmented tools caused inconsistent reporting and poor scalability.',
+      whyItMatters: 'Replaced licensed tool, unified workflows, and enabled real-time visibility across 10,000+ users globally.',
+      keyDecisions: [
+        'Unified multiple disconnected tools into one platform',
+        'Simplified employee workflows with gamification and scoring',
+        'Built multi-level BI dashboards for leadership visibility',
+        'Designed for global localization from the start'
+      ]
+    },
+    overview: {
+      context: 'Nike\'s global retail operations required a unified platform to track store performance, manage operational workflows, and provide real-time visibility to regional managers across multiple markets. The existing setup involved fragmented tools and manual processes.',
+      challenge: 'Store managers used disconnected tools leading to inconsistent reporting, limited leadership visibility, and poor scalability. No unified system existed for employee routines, manager tracking, or executive dashboards.',
+      solution: 'Designed an end-to-end enterprise platform with employee checklists, manager tools, and multi-level BI dashboards. The system unified workflows, improved visibility, and enabled global localization.'
+    },
+    details: {
+      problem: 'Nike\'s global retail operations spanned thousands of stores, but lacked a unified platform for performance tracking and operational workflows. Existing tools were fragmented—employees used manual checklists, managers had limited tracking capabilities, and leadership had no real-time visibility into store operations. This resulted in data completeness of only 55%, inconsistent task adherence, and managers spending 3–5 hours per week   on manual reporting. The system couldn\'t scale globally and lacked localization support.',
+      roleResponsibilities: [
+        'Owned end-to-end product strategy and design for $6.5M business-critical platform, influencing roadmap and prioritization',
+        'Defined product vision and information architecture for multi-role system serving employees, managers, regional directors, and executives',
+        'Drove unification strategy — convinced stakeholders to replace fragmented licensed tools with single integrated platform',
+        'Partnered with Product, Engineering, Analytics, and regional operations leaders across APAC and EMEA markets',
+        'Designed three-layered system architecture: employee workflows (gamification), manager tools (alerts, tracking), executive BI dashboards (analytics)',
+        'Championed localization-first approach, preventing costly redesigns and enabling global scale from day one',
+        'Led cross-regional alignment through design reviews, workshops, and stakeholder presentations',
+        'Measured and communicated impact: task adherence, data quality, reporting efficiency, user satisfaction'
+      ],
+      constraints: [
+        'Had to replace existing licensed tool while maintaining workflows',
+        'Support diverse user roles: employees, managers, regional directors, executives',
+        'Global rollout required localization and regional customization',
+        'Integration with legacy Nike systems and data sources',
+        'Performance constraints with large datasets and real-time updates',
+        'Limited training time for store-level users'
+      ],
+      research: [
+        'Conducted 35+ interviews with store employees, managers, and regional leaders',
+        'Shadowed store managers to understand daily operational workflows',
+        'Analyzed existing reporting processes and identified inefficiencies',
+        'Created journey maps for employee routines, manager tracking, and executive reporting',
+        'Studied enterprise BI tools (Tableau, Power BI, Looker) for best practices',
+        'Ran co-design workshops with regional operations teams'
+      ],
+      designProcess: [
+        'Started with discovery research to understand employee, manager, and leadership needs',
+        'Mapped system hierarchy: Employee → Store → Region → Global',
+        'Designed employee routine workflows with checklists and gamification scoring',
+        'Created manager tools for tracking adherence, alerts, and performance monitoring',
+        'Built multi-level BI dashboards with trends, filters, and comparative analytics',
+        'Designed localization system for language and regional customization',
+        'Prototyped and tested with 20+ users across 4 testing rounds',
+        'Collaborated with engineering on data architecture and visualization implementation',
+        'Designed onboarding flows and training materials for global rollout'
+      ],
+      keyDesignDecisions: [
+        '**Unified platform over multiple tools:** Decided to consolidate fragmented tools (manual checklists, spreadsheets, licensed BI tool) into single integrated platform. *Problem:* Fragmentation caused 55% data completeness, inconsistent workflows, $5M+ TCO. *Alternatives:* Improve existing tools separately (does not solve fragmentation), consolidate gradually (delayed ROI), build unified platform (chosen). *Why:* Unified system ensures consistency, reduces tool-switching friction, enables cross-layer insights (employee → executive). *Impact:* Achieved **$11.5M total savings** ($6.5M operational + $5M TCO) and **55% → 95% data completeness**.',
+        '**Gamification for employee workflows over standard checklists:** Designed scoring system with daily/weekly goals instead of basic task lists. *Problem:* Employees lacked motivation to complete routine tasks — only 65% adherence. *Alternatives:* Standard checklists (low engagement), mandatory enforcement (creates resentment), gamification with scoring (chosen). *Why:* Positive reinforcement drives intrinsic motivation better than mandates — visible progress and peer comparison encourage completion. *Impact:* Increased adherence by **+30% (65% → 95%)** through behavioral design.',
+        '**Multi-level BI dashboards (role-specific views) over universal dashboard:** Created 3 distinct dashboard experiences for employees, managers, and executives instead of one-size-fits-all. *Problem:* Different roles need different data depth — employees need tasks, managers need alerts, executives need trends. *Alternatives:* Universal dashboard with filters (overwhelming), separate apps (fragmentation), role-based views in one platform (chosen). *Why:* Role-specific experiences prevent information overload while enabling drill-down when needed. *Impact:* **92% user satisfaction** and **40-60% faster reporting** by matching data to role needs.',
+        '**Localization-first architecture over post-launch adaptation:** Designed system with localization baked into IA, not as afterthought. *Problem:* Global rollout to APAC/EMEA requires language/regional customization — retrofitting is expensive. *Alternatives:* Build for one market first (causes redesign), plan for localization later (technical debt), localization-first (chosen). *Why:* Early planning prevents structural changes and reduces long-term cost. *Impact:* Enabled seamless rollout to **10,000+ users across 8 markets** without major redesigns.'
+      ],
+      leadershipInfluence: [
+        'Influenced Product and Finance leaders to invest in unified platform by presenting $11.5M total savings opportunity (operational + TCO), securing executive buy-in and budget',
+        'Convinced regional stakeholders to adopt gamification approach by running pilot with 3 stores showing 28% adherence improvement — de-risked rollout and built momentum',
+        'Aligned Engineering and Analytics on role-based dashboard architecture by demonstrating how universal dashboard overwhelmed 80% of users in testing, shifting tech strategy',
+        'Championed localization-first approach through cost-benefit analysis showing 60% lower redesign costs, influencing product roadmap prioritization'
+      ],
+      beforeAfter: [
+        '**Before:** Fragmented tools (manual checklists, spreadsheets, licensed BI), 55% data completeness, 65% task adherence, 3–5 hours/week manual reporting, no leadership visibility',
+        '**After:** Unified platform, 95% data completeness, 95% task adherence, 40–60% faster reporting, real-time executive dashboards, **$11.5M total savings**, 92% user satisfaction'
+      ],
+      finalSolution: 'The Store Performance Platform provides three key layers:   Employee Tools   with daily checklists, task scoring, and gamification;   Manager Tools   with team tracking, performance alerts, and workflow management;   BI Dashboards   with multi-level views for regional directors and executives featuring trends, filters, and comparative analytics. The platform includes a robust localization system for global deployment. All workflows follow the hierarchy: Employee → Store → Region → Global.',
+      impact: [
+        '  $6.5M   annual operational savings through unified platform',
+        '  $5M   Total Cost of Ownership (TCO) reduction by replacing licensed tool',
+        'Improved task adherence by   +30%   (from 65% to 95%)',
+        'Reduced reporting time by   40–60%   (saving 2–3 hours per week)',
+        'Increased data completeness from   55% → 95%  ',
+        'Rolled out to   10,000+ users   across APAC and EMEA regions',
+        'Achieved   92%   user satisfaction in post-launch survey',
+        'Enabled real-time leadership visibility across global operations'
+      ],
+      learnings: [
+        'Enterprise systems require designing for multiple user levels simultaneously',
+        'Gamification and scoring systems drive employee engagement and adherence',
+        'Early localization planning prevents costly redesigns during global rollout',
+        'Multi-level BI dashboards must balance depth for power users with simplicity for executives',
+        'Unified platforms reduce TCO significantly compared to multiple licensed tools',
+        'Incremental rollout and training are critical for enterprise adoption'
+      ]
+    }
+  },
+
+  // PROJECT 3: AI CHATBOT PLATFORM
+  {
+    id: 'ai-chatbot-platform',
+    title: 'LLM-Powered Conversational Support Platform',
+    subtitle: 'Internal chatbot to reduce support tickets and improve response time',
+    problemStatement: 'Users relied on ticket-based support for platform questions, causing delays and inefficiencies',
+    impact: ['  65%   reduction in support queries', '  75%   faster response time', '  15,000+   conversations handled'],
+    role: 'Lead UX Designer',
+    timeline: 'Nike India • 2024',
+    category: 'featured',
+    thumbnail: 'src/imports/Images/airtalk.png',
+    signalBar: {
+      scope: '0→1 product',
+      users: '10,000+ employees'
+    },
+    scannableSummary: {
+      impact: ['  65%   reduction in support queries', '  75%   faster response time', '  45%   cost reduction'],
+      problem: 'Users relied on ticket-based support for platform questions, causing delays. Average response time was 4–6 hours, and complex issues took days to resolve.',
+      whyItMatters: 'Automated routine support, improved employee productivity, and freed support teams to focus on complex issues.',
+      keyDecisions: [
+        'Designed conversational interface instead of ticket workflow',
+        'Used LLM for natural language understanding',
+        'Created guided responses instead of fully open-ended AI',
+        'Added escalation to human support for complex queries'
+      ]
+    },
+    overview: {
+      context: 'Nike\'s internal platform users needed quick answers to questions about workflows, policies, and troubleshooting. The ticket-based support system caused delays and overwhelmed support teams with repetitive queries.',
+      challenge: 'Employees waited 4–6 hours for support responses, with complex issues taking days. Support teams spent 70% of their time handling routine inquiries that could be automated. There was no self-service option.',
+      solution: 'Designed an LLM-powered conversational support platform that provides instant answers through chat. The system uses natural language understanding, guided responses, and escalation to human support when needed.'
+    },
+    details: {
+      problem: 'With   10,000+ employees   using internal platforms, support teams handled   500+ tickets daily  , with most being repetitive queries about workflows, policies, and basic troubleshooting.   Average response time: 4–6 hours  . Complex issues took days. Users were frustrated by delays, and support teams were overwhelmed handling the same questions repeatedly. There was no unified, self-service support system.',
+      roleResponsibilities: [
+        'Owned end-to-end UX strategy for conversational AI platform, influencing product direction and business goals',
+        'Defined AI interaction model and trust framework (guided vs open-ended, escalation patterns, accuracy thresholds)',
+        'Partnered with ML engineers to shape LLM implementation — positioned AI as intent parser, not decision-maker',
+        'Aligned Product, Engineering, and Support leadership on trade-offs between automation and human oversight',
+        'Designed conversational flows optimized for non-technical users across varied technical literacy',
+        'Built admin dashboard and performance monitoring tools to enable support team ownership and iteration',
+        'Drove cross-functional alignment through design reviews and stakeholder workshops',
+        'Championed AI transparency and trust-building patterns to ensure employee confidence'
+      ],
+      constraints: [
+        'LLM accuracy and handling of edge cases',
+        'Need to maintain consistent, helpful tone',
+        'Privacy requirements for employee data',
+        'Integration with existing support systems',
+        'Varying technical literacy among employees',
+        'Limited training data for platform-specific questions'
+      ],
+      research: [
+        'Analyzed 10,000+ support tickets to identify common query patterns',
+        'Interviewed 50+ employees about support pain points and expectations',
+        'Shadowed support teams to understand workflows and edge cases',
+        'Studied conversational AI patterns (ChatGPT, Intercom)',
+        'Tested conversational prototypes with employees for usability',
+        'Created personas for different employee support needs'
+      ],
+      designProcess: [
+        'Mapped common employee questions and categorized by type',
+        'Designed conversational interface with task-based structure',
+        'Created guided response patterns instead of fully open-ended chat',
+        'Prototyped LLM integration for natural language understanding',
+        'Built escalation paths to human support with context handoff',
+        'Tested with employees to validate usefulness and accuracy',
+        'Designed feedback mechanisms to improve responses over time',
+        'Created admin dashboard for performance monitoring',
+        'Developed onboarding to introduce chat support to employees'
+      ],
+      keyDesignDecisions: [
+        '**Guided responses over fully open-ended AI:** Decided to design structured, task-based responses instead of fully generative chat. *Problem:* Open-ended LLM can hallucinate or provide incorrect information with high confidence, risking employee trust. *Alternatives:* Fully open chat (high risk), keyword-based FAQ (inflexible), guided conversational paths (chosen). *Why:* Balances AI capability with accuracy and trust — LLM handles intent parsing while predefined responses ensure correctness. *Impact:* Achieved **82% accuracy rate** and **88% employee satisfaction** through guided structure.',
+        '**LLM as intent parser, not source of truth:** Positioned LLM to understand user questions and route to appropriate responses, not generate answers from scratch. *Problem:* LLMs trained on public data lack Nike-specific platform knowledge, leading to generic or wrong answers. *Alternatives:* Fine-tune custom model (too expensive/slow), use RAG with internal docs (complexity), use intent-based routing (chosen). *Why:* Intent parsing requires less training data and is more reliable for enterprise use cases. *Impact:* Reduced implementation time by **6 weeks** and minimized hallucination risk.',
+        '**Immediate escalation to human support:** Designed clear escalation path when AI could not confidently answer. *Problem:* Users lose trust if AI provides unhelpful answers with no exit. *Alternatives:* Force AI-only responses (breaks trust), ask users to file ticket separately (friction), seamless escalation with context (chosen). *Why:* Preserves trust while handling edge cases — humans receive full conversation context for efficient resolution. *Impact:* **65% query reduction** while maintaining trust for complex issues.',
+        '**Slack-first integration over standalone app:** Launched in Slack (where employees already work) instead of building separate web app. *Problem:* Employees will not adopt another tool they need to remember and visit. *Alternatives:* Web-only app (low adoption), email-based (poor UX), Slack integration (chosen). *Why:* Meets users where they are, reduces adoption friction, enables quick access. *Impact:* Achieved **15,000+ conversations in 3 months** with minimal onboarding.'
+      ],
+      leadershipInfluence: [
+        'Influenced Product and Engineering to prioritize guided responses over fully generative AI by presenting trust/accuracy trade-offs backed by research with 50+ employees',
+        'Aligned Support leadership on AI-human collaboration model — positioned chatbot as enhancement to support team, not replacement, ensuring buy-in and adoption',
+        'Drove Slack integration decision by demonstrating 4x higher engagement in Slack prototypes vs web-only version, convincing stakeholders to deprioritize web app',
+        'Championed admin dashboard and monitoring tools to give Support team ownership of content and performance, building long-term sustainability'
+      ],
+      beforeAfter: [
+        '**Before:** 500+ daily support tickets, 4–6 hour average response time, 70% of tickets were repetitive questions, support team overwhelmed',
+        '**After:** 65% query reduction through automation, <1 hour response time, support team focused on complex issues, 24/7 availability, 88% employee satisfaction'
+      ],
+      finalSolution: 'The LLM-Powered Conversational Support Platform provides instant, chat-based support through web and Slack interfaces. The system follows a simple flow:   User query → LLM understanding → Response → Escalation   (if needed). Employees ask questions in natural language, and the system provides guided, task-based responses. For complex queries, the platform escalates to human support with full context. The interface is optimized for non-technical users and includes feedback mechanisms to improve accuracy.',
+      impact: [
+        'Reduced support queries by   65%   through automated responses',
+        'Improved response time by   75%   (from 4–6 hours to under 1 hour)',
+        'Cut support costs by   45%   by automating routine inquiries',
+        'Handled   15,000+ conversations   in first 3 months',
+        'Achieved   82%   accuracy rate on LLM responses',
+        'Increased employee satisfaction with support from   62% → 88%  ',
+        'Freed support team capacity to focus on complex issues',
+        'Enabled 24/7 support availability for global workforce'
+      ],
+      learnings: [
+        'Guided responses work better than open-ended AI for specific use cases',
+        'LLM should understand intent, not be the source of truth',
+        'Escalation to humans builds trust and handles edge cases gracefully',
+        'Conversational UI must feel helpful and approachable, not robotic',
+        'Feedback loops improve accuracy and user confidence over time',
+        'Integration with existing tools (Slack) drives immediate adoption'
+      ]
+    }
+  },
+
+  // PROJECT 4: ORGANIZATION HIERARCHY PLATFORM
+  {
+    id: 'org-hierarchy-platform',
+    title: 'Organization Hierarchy & Navigation Platform',
+    subtitle: 'Enterprise org visualization platform (CTO Office initiative)',
+    problemStatement: 'Leadership could not understand org structure at scale (1000+ nodes)',
+    impact: ['  80%   faster navigation', '5 min →   <30 sec   person search', '  +50%   onboarding clarity'],
+    role: 'Lead UX Designer',
+    timeline: 'Nike India (CTO Office) • 2023',
+    category: 'featured',
+    thumbnail: 'https://images.unsplash.com/photo-1769738360873-3ba6cac0b308?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvcmdhbml6YXRpb24lMjBjaGFydCUyMHN0cnVjdHVyZXxlbnwxfHx8fDE3NzQzNDM1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    signalBar: {
+      scope: 'CTO-backed • 1000+ nodes',
+      users: '10,000+ employees'
+    },
+    scannableSummary: {
+      impact: ['  80%   faster navigation', '5 min →   <30 sec   search', '  +50%   onboarding clarity'],
+      problem: 'Leadership could not understand or navigate org structure at scale. Existing tools didn\'t support 1000+ node complexity, causing delays in finding people and understanding reporting relationships.',
+      whyItMatters: 'CTO-backed initiative to enable leadership visibility and improve cross-team collaboration during major org restructuring.',
+      keyDecisions: [
+        'Designed hierarchy rules for depth vs breadth trade-offs',
+        'Used progressive disclosure to manage 1000+ node complexity',
+        'Introduced clustering for large org structures',
+        'Ensured performance optimization at enterprise scale'
+      ]
+    },
+    overview: {
+      context: 'Nike\'s CTO Office initiated a platform to visualize and navigate the technology organization\'s structure during a major restructuring. The goal was to help leadership and employees understand the new org chart, find colleagues, and identify reporting relationships across 10,000+ employees.',
+      challenge: 'Leadership could not visualize or navigate the org structure at scale (1000+ nodes). Existing tools were static PDFs or outdated systems that couldn\'t handle complexity, causing 5+ minute search times and confusion during onboarding.',
+      solution: 'Designed an enterprise org visualization platform with hierarchical graphs, cluster views, progressive disclosure, and powerful search. Worked directly with CTO office and engineering leadership to ensure scalability and performance.'
+    },
+    details: {
+      problem: 'Nike\'s technology organization had   10,000+ employees   structured across complex hierarchies with   1000+ nodes  . During a major restructuring led by the CTO Office, leadership and employees struggled to understand the new org chart. Existing tools were static PDFs or legacy systems that couldn\'t visualize large-scale hierarchies. Finding a specific person took   5+ minutes  , new employees reported confusion during onboarding, and leadership lacked visibility into team structures. The system needed to handle   depth vs breadth   trade-offs while maintaining performance at scale.',
+      roleResponsibilities: [
+        'Partnered directly with CTO Office and engineering leadership',
+        'Drove end-to-end UX design and information architecture',
+        'Defined hierarchy rules and system structure: Departments → Teams → Roles → Individuals',
+        'Designed progressive disclosure patterns for 1000+ node complexity',
+        'Created clustering system for large org structures',
+        'Built interaction flows for drill-down and cross-team navigation',
+        'Designed node card system, connectors, and detail panels',
+        'Ensured performance optimization at enterprise scale'
+      ],
+      constraints: [
+        'Had to visualize 1000+ nodes without overwhelming users',
+        'Balance depth vs breadth in hierarchy display',
+        'Performance requirements for real-time rendering',
+        'Privacy and permission controls for employee data',
+        'Integration with HR systems and Active Directory',
+        'Mobile and desktop optimization',
+        'Tight timeline due to org restructuring urgency'
+      ],
+      research: [
+        'Conducted discovery sessions with CTO Office to understand leadership needs',
+        'Interviewed 40+ employees, managers, and executives about navigation pain points',
+        'Analyzed existing org tools and static PDF usage patterns',
+        'Studied enterprise org visualization tools (Workday, BambooHR)',
+        'Tested information architecture with card sorting and tree testing',
+        'Created mental models for hierarchy exploration and person discovery'
+      ],
+      designProcess: [
+        'Started with CTO Office discovery to define business requirements',
+        'Mapped system hierarchy: Departments → Teams → Roles → Individuals',
+        'Designed hierarchy rules balancing depth and breadth',
+        'Created progressive disclosure patterns (expand/collapse, grouping)',
+        'Introduced clustering for large teams and departments',
+        'Designed drill-down and cross-team navigation flows',
+        'Built node card system with person details and connectors',
+        'Designed filters, search, and discovery features',
+        'Prototyped dark mode and visual styling for hierarchy graphs',
+        'Tested with leadership and employees across multiple rounds'
+      ],
+      keyDesignDecisions: [
+        "**Progressive disclosure over full visualization:** Decided to hide complexity by default and reveal on-demand instead of showing all 1000+ nodes. *Problem:* Full hierarchy overwhelmed users and caused performance issues. *Alternatives:* Show everything (poor performance, overwhelming), pagination (breaks mental model), progressive disclosure (chosen). *Why:* Users need context-appropriate detail — start simple, enable drill-down when needed. *Impact:* Achieved **80% faster navigation** and smooth performance with 1000+ nodes.",
+        "**Clustering large teams over individual nodes:** Grouped teams with 15+ members into collapsible clusters instead of showing every person. *Problem:* Large teams created visual clutter and made structure unclear. *Alternatives:* Show all individuals (cluttered), hide large teams entirely (loses info), cluster with expand option (chosen). *Why:* Clustering preserves structure while reducing cognitive load — users can expand when they need detail. *Impact:* Improved comprehension and **50% onboarding clarity increase**.",
+        "**Depth-first hierarchy (4 levels max) over breadth-first:** Designed system to prioritize vertical depth (Department → Team → Role → Individual) over horizontal breadth. *Problem:* Breadth-first creates wide, flat structures that are hard to scan. *Alternatives:* Flat hierarchy (loses context), unlimited depth (confusing), 4-level cap (chosen). *Why:* Depth provides context and reporting relationships — 4 levels balances detail with simplicity. *Impact:* Reduced person search time from **5 min → <30 sec**.",
+        "**Real-time sync with HR systems over manual updates:** Integrated directly with Active Directory for live data instead of manual org chart updates. *Problem:* Static org charts become outdated immediately during restructuring. *Alternatives:* Manual updates (maintenance burden), weekly sync (stale data), real-time sync (chosen). *Why:* Restructuring requires trust in data accuracy — real-time updates maintain credibility. *Impact:* Enabled seamless org restructuring with **9,500+ active users** and **88% satisfaction**."
+      ],
+      leadershipInfluence: [
+        "Convinced CTO Office to prioritize progressive disclosure over full visualization by demonstrating performance issues with 1000+ nodes in prototype — shifted strategy from ambitious scope to usable MVP",
+        "Aligned Engineering on clustering algorithm by running user tests showing 70% comprehension improvement with clusters vs individual nodes, securing engineering investment",
+        "Influenced HR and IT to enable real-time Active Directory integration by presenting org restructuring timeline risks — manual updates would lag by weeks, breaking trust",
+        "Championed 8-week aggressive timeline by running rapid design sprints and weekly CTO reviews — delivered on-time for org restructuring announcement"
+      ],
+      beforeAfter: [
+        "**Before:** Static PDFs, 5+ minute search times, no leadership visibility into org structure, confusion during onboarding, 1000+ node complexity unmanageable",
+        "**After:** Interactive platform, <30 second search, real-time updates, 80% faster navigation, 50% onboarding clarity improvement, 9,500+ active users, 88% satisfaction"
+      ],
+      finalSolution: 'The Organization Hierarchy Platform provides:   Hierarchy Graph   with expandable/collapsible nodes showing Departments → Teams → Roles → Individuals;   Cluster View   that groups large teams for better visualization;   Node Card System   displaying employee info and reporting relationships;   Person Detail Panel   with contact info, role, and team context;   Progressive Disclosure   to manage 1000+ node complexity;   Powerful Search   with autocomplete and filters;   Cross-team Navigation   for exploring connections. The platform is optimized for performance at enterprise scale and includes dark mode support.',
+      impact: [
+        'Improved navigation speed by   80%   (from 5 minutes to under 1 minute)',
+        'Reduced person search time from   5 minutes → <30 seconds  ',
+        'Increased onboarding clarity by   50%   based on new hire feedback',
+        'Supported   1000+ node   org structures with smooth performance',
+        'Achieved   88%   user satisfaction among leadership and employees',
+        'Enabled seamless org restructuring with real-time updates',
+        '  9,500+ active users   within first 3 months of launch',
+        'Reduced HR inquiries about org structure by   65%  '
+      ],
+      learnings: [
+        'Progressive disclosure is critical for managing 1000+ node complexity',
+        'Depth vs breadth trade-offs require careful hierarchy design rules',
+        'Clustering large structures improves comprehension without losing detail',
+        'Performance optimization at scale requires engineering collaboration from day one',
+        'Leadership visibility drives org-wide adoption and usage',
+        'Real-time updates are essential for maintaining trust during restructuring'
+      ]
+    }
+  },
+
+  // PROJECT 5: KEY MANAGEMENT PLATFORM (Additional Work)
+  {
+    id: 'key-management-platform',
+    title: 'Key Management Platform',
+    subtitle: 'Simplified permissions and secure access workflows',
+    problemStatement: 'Complex permission systems causing errors and security risks',
+    impact: ['Reduced access errors by 55%', 'Improved approval time by 50%', 'Increased onboarding clarity by 40%'],
+    role: 'Lead UX Designer',
+    timeline: 'Nike India • 2023',
+    category: 'additional',
+    thumbnail: 'https://images.unsplash.com/photo-1769704653651-2d09b1e6e60e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhY2Nlc3MlMjBzZWN1cml0eSUyMHN5c3RlbXxlbnwxfHx8fDE3NzQzNDM1Nzh8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    signalBar: {
+      scope: '10,000+ employees',
+      users: '10,000+ employees'
+    },
+    scannableSummary: {
+      impact: ['Reduced access errors by 55%', 'Improved approval time by 50%', 'Increased onboarding clarity by 40%'],
+      problem: 'Complex permission systems causing errors and security risks',
+      whyItMatters: 'Reduces security risks and improves efficiency in access management',
+      keyDecisions: ['Led UX redesign of enterprise access management platform', 'Designed simplified workflows for requesting and approving access', 'Created role-based templates and intelligent recommendations']
+    },
+    overview: {
+      context: 'Nike\'s enterprise key management system controlled permissions for internal tools and systems, but the complex interface led to frequent errors and security risks.',
+      challenge: 'Employees and managers struggled to request, approve, and manage access permissions. The system\'s complexity resulted in incorrect access requests, delayed approvals, and compliance risks.',
+      solution: 'Redesigned the access management workflow with clear role-based templates, simplified request flows, and intelligent recommendations to reduce errors and improve efficiency.'
+    },
+    details: {
+      problem: 'Nike\'s access management platform handled permissions for 10,000+ employees across hundreds of internal systems. The interface was confusing, requiring users to understand complex permission hierarchies. 45% of access requests required clarification or resubmission, and the average approval cycle took 5–7 days. This created security risks and productivity losses.',
+      roleResponsibilities: [
+        'Led UX redesign of enterprise access management platform',
+        'Collaborated with Security, IT, and HR teams',
+        'Designed simplified workflows for requesting and approving access',
+        'Conducted research with employees, managers, and administrators',
+        'Created role-based templates and intelligent recommendations'
+      ],
+      constraints: [
+        'Strict security and compliance requirements',
+        'Integration with legacy identity systems',
+        'Complex organizational role structures',
+        'Need to support audit trails and reporting'
+      ],
+      research: [
+        'Interviewed 50+ employees, managers, and IT administrators',
+        'Analyzed access request patterns and common error types',
+        'Studied enterprise access tools (Okta, SailPoint)',
+        'Created journey maps for different access scenarios'
+      ],
+      designProcess: [
+        'Mapped information architecture for role-based access templates',
+        'Designed simplified request forms with contextual help',
+        'Created intelligent recommendations based on role and team',
+        'Prototyped approval workflows with better context',
+        'Designed audit and reporting views for compliance'
+      ],
+      finalSolution: 'The redesigned Key Management Platform uses role-based templates that pre-populate common permission sets. Employees can request access using guided forms with intelligent suggestions. Managers receive approval requests with full context to make informed decisions. The system provides clear status tracking and automated reminders.',
+      impact: [
+        'Reduced access-related errors by 55% through better guidance',
+        'Improved onboarding clarity by 40% with role-based templates',
+        'Cut approval time by 50% (from 5–7 days to 2–3 days)',
+        'Decreased resubmission rate from 45% to 12%',
+        'Achieved 86% user satisfaction score',
+        'Reduced IT support tickets for access issues by 38%'
+      ],
+      learnings: [
+        'Simplification without sacrificing security is possible',
+        'Context is critical for approval decisions',
+        'Role-based templates reduce cognitive load',
+        'Security and usability can work together'
+      ]
+    }
+  },
+
+  // PROJECT 6: AI IMAGE & VIDEO GENERATION PLATFORM (Additional Work)
+  {
+    id: 'ai-content-generation',
+    title: 'AI Image & Video Generation Platform',
+    subtitle: 'AI-powered platform for scalable creative content production',
+    problemStatement: 'Heavy reliance on external vendors and slow creative production cycles',
+    impact: ['Reduced production time by 60%', 'Enabled 10x faster iteration', 'Cut production costs by 70%'],
+    role: 'Lead UX Designer',
+    timeline: 'Nike India • 2024',
+    category: 'additional',
+    thumbnail: 'https://images.unsplash.com/photo-1721864428830-7417b93831b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxBSSUyMGltYWdlJTIwZ2VuZXJhdGlvbiUyMGNyZWF0aXZlfGVufDF8fHx8MTc3NDM0MzU3OHww&ixlib=rb-4.1.0&q=80&w=1080',
+    signalBar: {
+      scope: '10,000+ employees',
+      users: '10,000+ employees'
+    },
+    scannableSummary: {
+      impact: ['Reduced production time by 60%', 'Enabled 10x faster iteration', 'Cut production costs by 70%'],
+      problem: 'Heavy reliance on external vendors and slow creative production cycles',
+      whyItMatters: 'Accelerates creative production and reduces costs for marketing and creative teams',
+      keyDecisions: ['Led UX design for AI-powered creative generation platform', 'Designed interaction patterns for AI-assisted workflows', 'Created intuitive interfaces for non-technical users']
+    },
+    overview: {
+      context: 'Nike\'s creative teams needed to produce thousands of product images and marketing videos quickly, but were limited by slow vendor cycles and high production costs.',
+      challenge: 'Traditional creative production required weeks of turnaround time and significant budget. Teams couldn\'t iterate quickly or test multiple creative variations.',
+      solution: 'Designed an AI-powered platform that enables marketing and creative teams to generate, customize, and iterate on product imagery and video content at scale.'
+    },
+    details: {
+      problem: 'Nike\'s marketing campaigns required thousands of product images and promotional videos. The traditional workflow involved briefing external vendors and waiting 2–3 weeks for deliverables. This process was expensive (averaging $500–2000 per asset), slow, and inflexible. Teams couldn\'t A/B test creative variations or quickly respond to market trends.',
+      roleResponsibilities: [
+        'Led UX design for AI-powered creative generation platform',
+        'Collaborated with ML engineers and creative stakeholders',
+        'Designed interaction patterns for AI-assisted workflows',
+        'Created intuitive interfaces for non-technical users',
+        'Established trust and transparency patterns for AI outputs'
+      ],
+      constraints: [
+        'AI model limitations and unpredictable outputs',
+        'Need to maintain Nike brand guidelines',
+        'Compliance requirements for generated content',
+        'Varying technical literacy among users'
+      ],
+      research: [
+        'Interviewed 30+ creative team members',
+        'Analyzed creative production workflows',
+        'Studied AI generation tools (Midjourney, DALL-E)',
+        'Ran co-design sessions with creative teams'
+      ],
+      designProcess: [
+        'Mapped end-to-end creative production workflows',
+        'Designed simplified prompt interfaces',
+        'Created template systems for common use cases',
+        'Prototyped brand guideline enforcement',
+        'Built asset management capabilities'
+      ],
+      finalSolution: 'The AI Content Generation Platform provides an intuitive interface where creatives can generate product imagery and videos using guided prompts, templates, and brand-aligned presets. Users can upload product assets, generate multiple variations, refine outputs, and export production-ready files. The platform includes brand safety checks and rights management.',
+      impact: [
+        'Reduced creative production time by 60% (from 2–3 weeks to 2–3 days)',
+        'Enabled 10x faster iteration across creative variations',
+        'Cut production costs by 70% for certain asset types',
+        'Generated 15,000+ assets in first 6 months',
+        'Improved AI tool adoption from 12% to 68%',
+        'Reduced vendor dependency for routine creative production'
+      ],
+      learnings: [
+        'AI UX should hide complexity while preserving control',
+        'Templates are more useful than open-ended prompts',
+        'Trust requires transparency about AI capabilities',
+        'Brand safety must be built into the workflow'
+      ]
+    }
+  }
+];

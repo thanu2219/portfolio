@@ -1,0 +1,77 @@
+export function Skills() {
+  const skills = [
+    {
+      category: 'UX & Product Design',
+      items: [
+        'User Research',
+        'Interaction Design',
+        'Systems Thinking',
+        'Enterprise UX',
+        'Information Architecture',
+        'Workflow Optimization'
+      ]
+    },
+    {
+      category: 'Specializations',
+      items: [
+        'Enterprise Platforms',
+        'Internal Tools',
+        'AI Product Design',
+        'Data Visualization',
+        'BI Dashboards',
+        'Design Systems'
+      ]
+    },
+    {
+      category: 'Process & Collaboration',
+      items: [
+        'Stakeholder Management',
+        'Agile & Design Sprints',
+        'Product Thinking',
+        'Cross-functional Leadership',
+        'Workshop Facilitation',
+        'Mentorship'
+      ]
+    },
+    {
+      category: 'Tools',
+      items: [
+        'Figma',
+        'FigJam',
+        'Miro',
+        'Jira',
+        'Analytics Tools',
+        'Prototyping'
+      ]
+    }
+  ];
+
+  return (
+    <section className="px-6 py-32 bg-neutral-50">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-20">
+          <h2 className="text-5xl md:text-6xl tracking-tight" style={{ fontFamily: 'Inter', fontWeight: 400 }}>
+            Skills & Expertise
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {skills.map((skillGroup) => (
+            <div key={skillGroup.category} className="space-y-6">
+              <h3 className="text-sm uppercase tracking-wider text-neutral-500" style={{ fontFamily: 'Inter', fontWeight: 500 }}>
+                {skillGroup.category}
+              </h3>
+              <ul className="space-y-3">
+                {skillGroup.items.map((item) => (
+                  <li key={item} className="text-neutral-700" style={{ fontFamily: 'Inter', fontWeight: 400 }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
